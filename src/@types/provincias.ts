@@ -21,7 +21,7 @@ export type TProvincias = {
     densidade_populacional: string;
     data_fundacao: string;
     extensao: string;
-    etnia: Array<string> | string;
+    etnia: Array<string>;
     numero_municipios: number;
   };
 };

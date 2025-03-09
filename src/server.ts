@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const allTypes = loadFilesSync(join(__dirname, "graphql", "**", "*.gql"));
-const allResolvers = loadFilesSync(join(__dirname, "graphql", "**", "resolvers.ts"));
+const allResolvers = loadFilesSync(join(__dirname, "graphql", "**", "resolvers.{js,ts}"));
 
 const typeDefs = mergeTypeDefs(allTypes);
 const resolvers = mergeResolvers(allResolvers);

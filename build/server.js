@@ -21,7 +21,7 @@ const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const allTypes = (0, load_files_1.loadFilesSync)((0, node_path_1.join)(__dirname, "graphql", "**", "*.gql"));
-const allResolvers = (0, load_files_1.loadFilesSync)((0, node_path_1.join)(__dirname, "graphql", "**", "resolvers.ts"));
+const allResolvers = (0, load_files_1.loadFilesSync)((0, node_path_1.join)(__dirname, "graphql", "**", "resolvers.{js,ts}"));
 const typeDefs = (0, merge_1.mergeTypeDefs)(allTypes);
 const resolvers = (0, merge_1.mergeResolvers)(allResolvers);
 const main = () => __awaiter(void 0, void 0, void 0, function* () {

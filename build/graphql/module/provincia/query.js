@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.query = void 0;
-const provincias_1 = require("@/db/provincias");
+const provincias_1 = require("../../../db/provincias");
 exports.query = {
     provincias: () => __awaiter(void 0, void 0, void 0, function* () {
         return provincias_1.provincias.map((item) => item);

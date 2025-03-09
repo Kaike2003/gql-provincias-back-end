@@ -8,24 +8,50 @@ Esta API GraphQL fornece informações sobre as províncias, incluindo ID, nome,
 
 ```graphql
 type Provincias {
-  id: ID!
-  nome: String!
-  area: String!
-  fundada: String!
-  capital: String!
-  prefixo_telefonico: String!
-  site_governo_provincial: String!
-  municipios: [String!]!
+  provincia: String!
+  governador: Governador!
+  vice_governadores: [Vice_governadores!]!
+  municipios: [Municipios]!
+  informacoes_adicionais: InformacoesAdicionais!
 }
 
 input InputNomeProvincia {
   provincia: String!
 }
 
+type Governador {
+  nome: String!
+  data_nomeacao: String!
+}
+
+type Vice_governadores {
+  nome: String!
+  cargo: String!
+}
+
+type InformacoesAdicionais {
+  capital: String
+  linguas: [String]
+  densidade_populacional: String
+  data_fundacao: String
+  extensao: String
+  etnia: [String]
+  numero_municipios: String
+}
+
+type Municipios {
+  nome: String!
+  comunas: [String]
+  distritos: [String]
+  data_fundacao: String
+  administrador: String
+}
+
 type Query {
   provincias: [Provincias!]!
   provincia(data: InputNomeProvincia!): Provincias!
 }
+
 ```
 
 ## Como Executar o Projeto

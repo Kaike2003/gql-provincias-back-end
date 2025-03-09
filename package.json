@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm install --legacy-peer-deps",
     "start": "tsx watch ./src/server.ts"
   },
   "keywords": [],

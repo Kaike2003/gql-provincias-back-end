@@ -1,5 +1,5 @@
 import { TProvincias } from "@/@types/provincias";
-import { provincias } from "@/db/provincias";
+import { provincias } from "@/db/data";
 
 type InputNomeProvincia = {
   data: {
@@ -12,6 +12,6 @@ export const query = {
     return provincias.map((item) => item);
   },
   provincia: async (obj: any, { data: { provincia } }: InputNomeProvincia): Promise<TProvincias | undefined> => {
-    return provincias.find((item) => item.nome === provincia);
+    return provincias.find((item) => item.provincia === provincia);
   },
 };

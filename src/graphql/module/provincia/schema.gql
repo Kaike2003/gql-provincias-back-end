@@ -17,3 +17,5 @@ type Query {
   provincias: [Provincias!]!
   provincia(data: InputNomeProvincia!): Provincias!
 }
+
+

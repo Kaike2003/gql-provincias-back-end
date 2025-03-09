@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm install --force",
     "start": "tsx watch ./src/server.ts"
   },
   "keywords": [],
@@ -21,7 +20,7 @@
     "express": "^4.21.2",
     "express-graphql": "^0.12.0",
     "express-rate-limit": "^7.5.0",
-    "graphql": "^16.10.0",
+    "graphql": "^15.10.1",
     "graphql-tools": "^9.0.11",
     "nodemon": "^3.1.9",
     "sucrase": "^3.35.0",

@@ -1,0 +1,19 @@
+type Provincias {
+  id: ID!
+  nome: String!
+  area: String!
+  fundada: String!
+  capital: String!
+  prefixo_telefonico: String!
+  site_governo_provincial: String!
+  municipios: [String!]!
+}
+
+input InputNomeProvincia {
+  provincia: String!
+}
+
+type Query {
+  provincias: [Provincias!]!
+  provincia(data: InputNomeProvincia!): Provincias!
+}
